@@ -25,6 +25,9 @@
  */
  
 import javax.swing.*;
+
+import regular.Rename;
+
 import java.awt.*;
 
 /**
@@ -39,6 +42,10 @@ public class JFLAPplet extends JApplet {
      * This instantiates a new JFLAPplet.
      */
     public JFLAPplet() {
+        extracted();
+    }
+
+    private void extracted() {
         getRootPane().putClientProperty("defeatSystemEventQueueCheck",
                                         Boolean.TRUE);
     }
@@ -60,7 +67,7 @@ public class JFLAPplet extends JApplet {
 	     JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         getContentPane().add(text, BorderLayout.CENTER);
 	// Start the application.
-	JFLAP.main(new String[0]);
+	Rename.main(new String[0]);
 
     }
 }

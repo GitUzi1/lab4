@@ -86,7 +86,7 @@ public class ImageDisplayComponent extends JComponent implements Scrollable {
      * @param origin the point in the image that is the real "origin"
      * of the image (should be 0,0 in most cases)
      */
-    public void setImage(Image image, Point origin) {
+    public void setIMG(Image image, Point origin) {
 	myImage = image;
 	myOrigin = origin;
 	trackImage(getImage());
@@ -99,7 +99,7 @@ public class ImageDisplayComponent extends JComponent implements Scrollable {
      * @param image the new image for this component
      */
     public void setImage(Image image) {
-	setImage(image, ZERO_ORIGIN);
+	setIMG(image, ZERO_ORIGIN);
     }
 
     /**

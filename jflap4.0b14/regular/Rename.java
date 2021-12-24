@@ -1,3 +1,4 @@
+package regular;
 /* -- JFLAP 4.0 --
  *
  * Copyright information:
@@ -38,7 +39,7 @@ import java.security.*;
  * @author Thomas Finley
  */
 
-public class JFLAP {
+public class Rename {
     /**
      * Starts JFLAP.  This sets various system properties.  If there
      * are command line arguments, this will attempt to open them as
@@ -50,12 +51,12 @@ public class JFLAP {
     public static void main(String[] args) {
 	// Make sure we're not some old version.
 	try {
-	    String v = System.getProperty("java.specification.version");
-	    double version = Double.parseDouble(v)+0.00001;
+	    String p = System.getProperty("java.specification.version");
+	    double version = Double.parseDouble(p)+0.00001;
 	    if (version < 1.4) {
 		javax.swing.JOptionPane.showMessageDialog
 		    (null, "Java 1.4 or higher required to run JFLAP!\n"+
-		     "You appear to be running Java "+v+".\n"+
+		     "You appear to be running Java "+p+".\n"+
 		     "This program will now exit.");
 		System.exit(0);
 	    }
